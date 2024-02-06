@@ -124,8 +124,7 @@ with tab2:
 
     # model = joblib.load('knn_model.joblib')
 
-    with open('lr_model.pkl', 'rb') as file:
-        model = pickle.load(file)
+    model = pickle.load(open('lr_model.pkl', 'rb'))
 
     user_input = prepare_data(df)
     
