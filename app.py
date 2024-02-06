@@ -129,10 +129,10 @@ with tab2:
 
     user_input = prepare_data(df)
 
-    st.write(user_input.values.tolist())
+    x = user_input.values.tolist()
     
     # Use the model to make predictions based on user input
-    prediction = model.predict(user_input)[0]
+    prediction = model.predict(x)
     
     # Display the prediction
     if prediction == 0:
