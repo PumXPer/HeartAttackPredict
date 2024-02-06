@@ -119,6 +119,7 @@ with tab2:
 
         return df
 
+
     # Prediction model
     # test
 
@@ -127,6 +128,8 @@ with tab2:
     model = pickle.load(open('lr_model.pkl', 'rb'))
 
     user_input = prepare_data(df)
+
+    st.write(user_input.values.tolist())
     
     # Use the model to make predictions based on user input
     prediction = model.predict(user_input)[0]
