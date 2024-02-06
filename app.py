@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import random
 import pickle
 from html_component import *
 
@@ -8,6 +8,18 @@ st.title('Predictions Heart Attack')
 st.write('This app predicts the likelihood of a heart attack based on the user input.')
 st.write('**Default value is No Heart Attack**')
 tab1, tab2 = st.tabs(["Form ", "Result"])
+
+if st.button("Generate Random Values"):
+    trtbps = random.randint(90, 200)
+    chol = random.randint(100, 600)
+    thalachh = random.randint(60, 200)
+    oldpeak = round(random.uniform(0.0, 6.2), 1)
+
+    # Update sliders with random values
+    st.slider('Resting Blood Pressure (trtbps)', 90, 200, trtbps)
+    st.slider('Cholesterol (chol)', 100, 600, chol)
+    st.slider('Maximum Heart Rate Achieved (thalachh)', 60, 200, thalachh)
+    st.slider('Oldpeak (ST depression induced by exercise relative to rest)', 0.0, 6.2, oldpeak)
 
 with tab1:
 
