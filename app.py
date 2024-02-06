@@ -120,6 +120,7 @@ with tab2:
         return df
 
     # Prediction model
+    # test
 
     # model = joblib.load('knn_model.joblib')
 
