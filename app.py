@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import random
 import pickle
 from html_component import *
 
