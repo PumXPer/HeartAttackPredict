@@ -123,7 +123,7 @@ with tab2:
 
     # model = joblib.load('knn_model.joblib')
 
-    with open('knn_model.pkl', 'rb') as file:
+    with open('lr_model.pkl', 'rb') as file:
         model = pickle.load(file)
 
     user_input = prepare_data(df)
