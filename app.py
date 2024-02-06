@@ -12,7 +12,7 @@ tab1, tab2 = st.tabs(["Form ", "Result"])
 with tab1:
 
     st.header('Form Predictions Heart Attack')
-    name = st.text_input('Name', 'Life of Brian')
+    name = st.text_input('Name', 'John Doe')
     age = st.number_input('Age',min_value=0,value=30, step=1)
 
     col1, col2 = st.columns(2)
@@ -55,9 +55,6 @@ with tab1:
     
     #st.selectbox('Exercise Induced Angina (exng) - เจ็บหน้าอกจากการออกกำลังกาย', ["No", "Yes"])
     # Button to generate random values for the entire form
-    if st.button('Randomize Input'):
-        name = 'Life of Brian'
-        age = random.randint(20, 80)
 
 with tab2:
     st.header('Result Predictions Heart Attack')
@@ -103,6 +100,42 @@ with tab2:
         'caa': [caa],
         'thall': [thall]
     }
+
+    def generate_random_values():
+        name = "John Doe"  # You can replace this with a random name generation logic
+        age = random.randint(18, 80)
+        sex = random.choice(["Male", "Female"])
+        cp = random.choice(["typical", "atypical", "non-anginal", "asymptomatic"])
+        trtbps = random.randint(90, 200)
+        chol = random.randint(100, 600)
+        fbs = random.choice(["Yes", "No"])
+        restecg = random.choice(["Normal", "Abnormal"])
+        thalachh = random.randint(60, 200)
+        exng = random.choice(["Yes", "No"])
+        oldpeak = round(random.uniform(0.0, 6.2), 1)
+        slp = random.choice(["upsloping", "flat", "downsloping"])
+        caa = random.randint(0, 3)
+        thall = random.choice(["Normal", "Fixed defect", "Reversible defect"])
+
+    # Update the DataFrame with the new values
+    df_dict['Name'].append(name)
+    df_dict['Age'].append(age)
+    df_dict['Sex'].append(sex)
+    df_dict['cp'].append(cp)
+    df_dict['trtbps'].append(trtbps)
+    df_dict['chol'].append(chol)
+    df_dict['fbs'].append(fbs)
+    df_dict['restecg'].append(restecg)
+    df_dict['thalachh'].append(thalachh)
+    df_dict['exng'].append(exng)
+    df_dict['oldpeak'].append(oldpeak)
+    df_dict['slp'].append(slp)
+    df_dict['caa'].append(caa)
+    df_dict['thall'].append(thall)
+
+    if st.button('Generate Random Values'):
+        generate_random_values()
+
 
     # st.write('Result :', df_dict)
     
