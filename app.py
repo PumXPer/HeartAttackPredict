@@ -137,7 +137,7 @@ with tab2:
         generate_random_values()
 
 
-    # st.write('Result :', df_dict)
+    st.write('Result :', df_dict)
     
     # Prepare data
     df =  pd.DataFrame(df_dict)
