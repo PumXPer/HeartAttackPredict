@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import pickle
 from html_component import *
 
 st.title('Predictions Heart Attack')
@@ -120,7 +121,10 @@ with tab2:
 
     # Prediction model
 
-    model = joblib.load('knn_model.joblib')
+    # model = joblib.load('knn_model.joblib')
+
+    with open('knn_model.pkl', 'rb') as file:
+        model = pickle.load(file)
 
     user_input = prepare_data(df)
     
