@@ -14,7 +14,7 @@ def show(df,result):
       </style>
     </head>
     <table>
-      <tr color:red>
+      <tr style="background-color:  rgb(78, 77, 75)">
         <td>
             <b>Name</b> : {df['Name'][0]}
         </td>
