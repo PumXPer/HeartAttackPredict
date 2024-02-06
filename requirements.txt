@@ -1,9 +1,8 @@
 streamlit
 pandas
 numpy
-plotly
 requests
 joblib
 scipy
 threadpoolctl
-scikit-learn
+scikit-learn == 1.3.0
