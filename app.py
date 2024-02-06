@@ -124,9 +124,9 @@ with tab2:
     # test
 
     # model = joblib.load('knn_model.joblib')
-    st.write(1)
-    model = pickle.load(open('lr_model.pkl', 'rb'))
-    st.write(2)
+    # st.write(1)
+    model = pickle.load(open('models/lr_model.pkl', 'rb'))
+    # st.write(2)
     user_input = prepare_data(df)
 
     x = user_input.values.tolist()
