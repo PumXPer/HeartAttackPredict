@@ -6,6 +6,7 @@ import random
 from html_component import show
 
 st.title('Predictions Heart Attack - Random Values')
+st.write('หมายเหตุ : ถ้าไม่มีข้อมูลปรากฏสามารถคลิกปุ่ม Generate Random Values ได้เรื่อยๆ จนกว่าจะปรากฏข้อมูลที่ต้องการได้เลยครับ')
 
 # Create an initial empty DataFrame
 data_json = {
