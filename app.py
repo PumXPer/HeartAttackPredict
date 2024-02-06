@@ -45,8 +45,12 @@ with tab1:
             "Fixed defect (เสียงเสีย)",
             "Reversable defect (เสียงกลับได้)"
         ])
+    import streamlit as st
 
-    trtbps = st.slider('Resting Blood Pressure (trtbps)', 90, 200, 120, value=160)
+    age = st.slider('How old are you?', 0, 130, 25)
+    st.write("I'm ", age, 'years old')
+
+    trtbps = st.slider('Resting Blood Pressure (trtbps)', 90, 200, 120, value=200)
     chol = st.slider('Cholesterol (chol)', 100, 600, 200, value=286)
     thalachh = st.slider('Maximum Heart Rate Achieved (thalachh)', 60, 200, 150,value=108)
     oldpeak = st.slider('Oldpeak (ST depression induced by exercise relative to rest)', 0.0, 6.2, 1.0, value=1.5)
