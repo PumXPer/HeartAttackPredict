@@ -14,9 +14,9 @@ def show(df,result):
       </style>
     </head>
     <table>
-      <tr>
+      <tr color:red>
         <td>
-            Name : {df['Name'][0]}
+            <b>Name</b> : {df['Name'][0]}
         </td>
         <td>
             Age : {df['Age'][0]}
