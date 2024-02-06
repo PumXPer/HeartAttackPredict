@@ -21,7 +21,7 @@ with tab1:
             "Sex",
             ["Man ", "Woman"],)
         caa = st.number_input('Number of major vessels (0-3) colored by flourosopy', min_value=0, max_value=3, step=1)
-        fbs = st.selectbox('Fasting Blood Sugar > 120 mg/dl (fbs)', ["Yes", "No"],index=1)
+        fbs = st.selectbox('Fasting Blood Sugar > 120 mg/dl (fbs)', ["Yes", "No"])
         slp = st.selectbox('Slope of the Peak Exercise ST Segment (slp)', [
             "upsloping", 
             "flat (horizontal)" , 
@@ -30,12 +30,12 @@ with tab1:
     with col2:
         exng =  st.radio(
                 "Exercise Induced Angina (exng)",
-                ["Yes", "No"],index=1)
+                ["Yes", "No"])
         cp = st.selectbox('Chest Pain Type (cp)', [
             "typical anigma (อาการแน่นหน้าอกทั่วไป)",
             "atypical anigma (แน่นหน้าอกผิดปกติ)",
             "non-anginal pain (อาการปวดแบบไม่เจ็บแน่นหน้าอก)",
-            "asymptomatic (ไม่มีอาการ)",],index=0)
+            "asymptomatic (ไม่มีอาการ)",])
         restecg = st.selectbox('Resting Electrocardiographic Results (restecg)', [
             "Normal (ปกติ)",
             "There is an ST-T wave abnormality (มีความผิดปกติของคลื่น ST-T)",
