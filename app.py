@@ -46,7 +46,7 @@ with tab1:
             "Reversable defect (เสียงกลับได้)"
         ])
 
-    trtbps = st.slider('Resting Blood Pressure (trtbps)', 90, 200, 200)
+    trtbps = st.slider('Resting Blood Pressure (trtbps)', 90, 200, 160)
     chol = st.slider('Cholesterol (chol)', 100, 600, 286)
     thalachh = st.slider('Maximum Heart Rate Achieved (thalachh)', 60, 200, 108)
     oldpeak = st.slider('Oldpeak (ST depression induced by exercise relative to rest)', 0.0, 6.2, 1.5)
