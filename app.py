@@ -5,7 +5,8 @@ import pickle
 from html_component import *
 
 st.title('Predictions Heart Attack')
-st.write('This app predicts the likelihood of a heart attack based on the user input.**default value is No Heart Attack**')
+st.write('This app predicts the likelihood of a heart attack based on the user input.')
+st.write('**Default value is No Heart Attack**')
 tab1, tab2 = st.tabs(["Form ", "Result"])
 
 with tab1:
