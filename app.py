@@ -9,18 +9,6 @@ st.write('This app predicts the likelihood of a heart attack based on the user i
 st.write('**Default value is No Heart Attack**')
 tab1, tab2 = st.tabs(["Form ", "Result"])
 
-if st.button("Generate Random Values"):
-    trtbps = random.randint(90, 200)
-    chol = random.randint(100, 600)
-    thalachh = random.randint(60, 200)
-    oldpeak = round(random.uniform(0.0, 6.2), 1)
-
-    # Update sliders with random values
-    st.slider('Resting Blood Pressure (trtbps)', 90, 200, trtbps)
-    st.slider('Cholesterol (chol)', 100, 600, chol)
-    st.slider('Maximum Heart Rate Achieved (thalachh)', 60, 200, thalachh)
-    st.slider('Oldpeak (ST depression induced by exercise relative to rest)', 0.0, 6.2, oldpeak)
-
 with tab1:
 
     st.header('Form Predictions Heart Attack')
@@ -66,6 +54,30 @@ with tab1:
     
     
     #st.selectbox('Exercise Induced Angina (exng) - เจ็บหน้าอกจากการออกกำลังกาย', ["No", "Yes"])
+    # Button to generate random values for the entire form
+    if st.button("Generate Random Values"):
+        caa = random.randint(0, 3)
+        fbs = random.choice(["Yes", "No"])
+        slp = random.choice(["upsloping", "flat (horizontal)", "downsloping"])
+        exng = random.choice(["Yes", "No"])
+        cp = random.choice([
+            "typical anigma (อาการแน่นหน้าอกทั่วไป)",
+            "atypical anigma (แน่นหน้าอกผิดปกติ)",
+            "non-anginal pain (อาการปวดแบบไม่เจ็บแน่นหน้าอก)",
+            "asymptomatic (ไม่มีอาการ)"
+        ])
+        restecg = random.choice([
+            "Normal (ปกติ)",
+            "There is an ST-T wave abnormality (มีความผิดปกติของคลื่น ST-T)",
+            "Shows possible left ventricular hypertrophy (แสดงภาวะกระเป๋าหน้าท้องด้านซ้ายโตเกินที่เป็นไปได้)"
+        ])
+        thall = random.choice(["Normal (ปกติ)", "Fixed defect (เสียงเสีย)", "Reversable defect (เสียงกลับได้)"])
+
+        # Sliders for numerical features
+        trtbps = st.slider('Resting Blood Pressure (trtbps)', 90, 200, 160)
+        chol = st.slider('Cholesterol (chol)', 100, 600, 286)
+        thalachh = st.slider('Maximum Heart Rate Achieved (thalachh)', 60, 200, 108)
+        oldpeak = st.slider('Oldpeak (ST depression induced by exercise relative to rest)', 0.0, 6.2, 1.5)
 
 with tab2:
     st.header('Result Predictions Heart Attack')
