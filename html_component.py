@@ -13,74 +13,128 @@ def show(df,result):
         }}
       </style>
     </head>
+    <div style="margin-top: 10px;"></div>
     <table>
       <tr style="background-color:  rgb(78, 77, 75)">
-        <td>
-            <b>Name</b> : {df['Name'][0]}
+        <td style="width: 20%">
+            <b>Name</b> : 
         </td>
         <td>
-            Age : {df['Age'][0]}
-        </td>
-        <td>
-            Sex : {df['Sex'][0]}
-        </td>
-      </tr>
-      <tr>
-        <td>
-            Exercise Induced Angina : {df['exng'][0]}
-        </td>
-        <td>
-            Oldpeak : {df['oldpeak'][0]}
-        </td>
-        <td>
-            Cholesterol : {df['chol'][0]}
+            {df['Name'][0]}
         </td>
       </tr>
     </table>
     <table>
-      <tr>
+      <tr style="background-color:  rgb(108, 106, 103)">
         <td>
-            Thalassemia : {df['thall'][0]}
+            <b>Age</b>:
         </td>
         <td>
-            Resting Blood Pressure : {df['trtbps'][0]}
+            {df['Age'][0]}
+        </td>
+        <td>
+            <b>Sex</b>:
+        </td>
+         <td>
+            {df['Sex'][0]}
         </td>
       </tr>
-      <tr>
-        <td>
-            Maximum Heart Rate Achieved : {df['thalachh'][0]}
+      <tr style="background-color:  rgb(78, 77, 75)">
+       <td>
+            <b>Oldpeak</b> : 
         </td>
         <td>
-            Fasting Blood Sugar > 120 mg/dl (fbs) : {df['fbs'][0]}
+            {df['oldpeak'][0]}
+        </td>
+        <td>
+            <b>Cholesterol</b> :
+        </td>
+        <td>
+            {df['chol'][0]}
+        </td>
+      </tr>
+       <tr style="background-color:  rgb(108, 106, 103)">
+        <td>
+            <b>Exercise Induced Angina</b> :
+        </td>
+        <td>
+            {df['exng'][0]}
+        </td>
+        <td>
+            <b>Thalassemia</b> : 
+        </td>
+        <td>
+            {df['thall'][0]}
+        </td>
+      </tr>
+       <tr style="background-color:  rgb(78, 77, 75)">
+        <td>
+            <b>Resting Blood Pressure</b> :
+        </td>
+        <td>
+            {df['trtbps'][0]}
+        </td>
+        <td>
+            <b>Maximum Heart Rate Achieved</b> :
+        </td>
+        <td>
+            {df['thalachh'][0]}
         </td>
       </tr>
     </table>
     <table>
-      <tr>
+      <tr style="background-color:  rgb(108, 106, 103)">
         <td>
-            Chest Pain Type : {df['cp'][0]}
+            <b>Fasting Blood Sugar > 120 mg/dl (fbs)</b> :
+        </td>
+        <td>
+            {df['fbs'][0]}
+        </td>
+      <tr style="background-color:  rgb(78, 77, 75)">
+        <td>
+            <b>Chest Pain Type</b> : 
+        </td>
+        <td>
+            {df['cp'][0]}
         </td>
       </tr>
-      <tr>
+      <tr style="background-color:  rgb(108, 106, 103)">
         <td>
-            Slope of the Peak Exercise ST Segment : {df['slp'][0]}
+            <b>Slope of the Peak Exercise ST Segment</b> :
+        </td>
+         <td>
+            {df['slp'][0]}
         </td>
       </tr>
-      <tr>
+      <tr style="background-color:  rgb(78, 77, 75)">
         <td>
-            Resting Electrocardiographic Results : {df['restecg'][0]}
+            <b>Resting Electrocardiographic Results</b> :
+        </td>
+         <td>
+            {df['restecg'][0]}
         </td>
       </tr>
-      <tr>
+      <tr style="background-color:  rgb(108, 106, 103)">
         <td>
-            Number of major vessels (0-3) colored by flourosopy : {df['caa'][0]}
+            <b>Number of major vessels (0-3) colored by flourosopy</b> :
+        </td>
+        <td>
+            {df['caa'][0]}
+        </td>
+      </tr>
+      <tr style="background-color:  rgb(108, 106, 103)">
+        <td>
+            <b>Slope of the Peak Exercise ST Segment</b> :
+        </td>
+        <td>
+            {df['slp'][0]}
         </td>
       </tr>
     </table>
     <table>
-      <tr>
+      <tr style="background-color:  rgb(86, 72, 52)">
         <td>
-            Result : {result}
+            <b>Result</b> : {result}
         </td>
       </tr>
      """
